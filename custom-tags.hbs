@@ -11,10 +11,10 @@
 	<section class="tags">
 		{{#foreach tags}}
 		<tag>
+			<h2 class="tagname"><a href="{{url}}">{{name}} <small>({{ count.posts }})</small></a></h2>
 			{{#if feature_image}}
 			<a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{name}}" /></a>
 			{{/if}}
-			<h3><a href="{{url}}">{{name}} <small>({{ count.posts }})</small></a></h3>
 		</tag>
 		{{/foreach}}
 	</section>
