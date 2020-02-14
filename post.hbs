@@ -9,6 +9,8 @@ into the {body} of the default.hbs template --}}
     <header class="main content">
         <span class="date">{{date format="MMMM D, YYYY"}}</span>
         <h1>{{title}}</h1>
+
+        {{tags separator=", "}} <!-- limit=4 -->
         {{#if custom_excerpt}}
             <p class="content">{{custom_excerpt}}</p>
         {{/if}}

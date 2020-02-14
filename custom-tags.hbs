@@ -1,0 +1,23 @@
+{{!< default}}
+
+
+{{!-- Posts --}}
+<section>
+
+	<header class="major">
+			<h2>Tags</h2>
+	</header>
+	{{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+	<section class="tags">
+		{{#foreach tags}}
+		<tag>
+			{{#if feature_image}}
+			<a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{name}}" /></a>
+			{{/if}}
+			<h3><a href="{{url}}">{{name}} <small>({{ count.posts }})</small></a></h3>
+		</tag>
+		{{/foreach}}
+	</section>
+	{{/get}}
+
+</section>
